@@ -1,0 +1,43 @@
+﻿@page
+@model ApplicationsInMyMobile.Pages.Applications.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>App</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.App.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.App.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.App.Developer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.App.Developer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.App.ReleaseYear)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.App.ReleaseYear)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.App.RatingOnPlay)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.App.RatingOnPlay)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.App.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
